@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#382998</color>
+    <color name="colorPrimaryDark">@color/darkcolor</color>
+    <color name="colorAccent">@color/darkcolor</color>
+
+
+    <color name="Button_Normal_Color">#ff252525</color>
+    <color name="Button_Selected_Color">#ff0089ff</color>
+    <color name="Footer_Color">#ffffffff</color>
+    <color name="Header_Font_Color">#ff252525</color>
+    <color name="Sticker_BG_Color">#fff6f6f6</color>
+    <color name="Sticker_Border_Color">#ffffffff</color>
+    <color name="Sticker_Selected_Color">#ffe3e3e3</color>
+    <color name="Stroke">#ff0089ff</color>
+    <color name="black">@color/darkcolor</color>
+    <color name="black_translucent">#ffffff</color>
+    <color name="borderColor">#b0b4b9</color>
+    <color name="color_white_color">#ffffffff</color>
+    <color name="seekbargray">#ffffff</color>
+    <color name="textColor">@color/darkcolor</color>
+    <color name="trans">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="waveform_unselected">#535353</color>
+    <color name="waveform_unselected_bkgnd_overlay">#ffd6d7d7</color>
+    <color name="selection_border">#ffffff</color>
+    <color name="playback_indicator">#ffff66</color>
+    <color name="timecode">@color/white</color>
+    <color name="timecode_shadow">@color/white</color>
+    <color name="image">#ffffff</color>
+    <color name="image_text">@color/white</color>
+    <color name="backgraunds">#373553</color>
+    <color name="darkcolor">#221f35</color>
+    <color name="light_clr">#373553</color>
+
+
+</resources>

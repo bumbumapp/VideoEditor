@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable-hdpi/border_button_shape.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable-xhdpi/progressdrawable.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable-xhdpi/push_btn_selector.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ambilwarna_alphacheckered_tiled.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/banner_main.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/bg_dark.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/bg_prev_play.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/bg_round.xml" value="0.27870370370370373" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/bg_round_press.xml" value="0.27870370370370373" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/bg_wh.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/box.xml" value="0.27314814814814814" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/button_border_shape.xml" value="0.27870370370370373" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/button_shape.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/circle_shape_1.xml" value="0.24814814814814815" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/cutter.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/design_bottom_navigation_item_background.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/design_fab_background.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/design_password_eye.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/design_snackbar_background.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/dropdown_bg.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/frame_presed.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/frameadd_btn_selector.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/gradents_bg.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic__74268281537356022.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_back.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_baseline_done.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_close_white_24dp.xml" value="0.27870370370370373" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_dropdown_bg.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_music.xml" value="0.2111111111111111" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_next_play.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_prev_unpress.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_shutter1.xml" value="0.27870370370370373" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/input_field_bg.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/music_icon.xml" value="1.1" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/music_radio_btn_selector.xml" value="0.24814814814814815" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/navigation_empty_icon.xml" value="0.1484375" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/pause2.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/play2.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/push_btn_deleteselector.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/rectangle_bg.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/seekbar_background_fill.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/seekbar_progress.xml" value="0.27870370370370373" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/seekbar_progress_fill.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/seekbar_thumb.xml" value="1.1395833333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/shape_triangle.xml" value="0.27870370370370373" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/stroke_rect.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/stroke_text_sticker.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/toolbar_dropshadow.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/toolbar_dropshadow_bottom.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/transparent_background.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/transparent_progress_drawable.xml" value="0.25462962962962965" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/voldown.xml" value="0.25462962962962965" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/activity_splash.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/activity_startactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/adunity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/ambilwarna_dialog.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/ambilwarna_pref_widget.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audio_select_music_row.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audiocompressoractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audiojoineractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audioplayer.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audiovideomixeractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/crop_image_view.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_bottom_navigation_item.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_bottom_sheet_dialog.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_layout_snackbar.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_layout_snackbar_include.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_layout_tab_icon.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_layout_tab_text.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_menu_item_action_area.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_navigation_item.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_navigation_item_header.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_navigation_item_separator.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_navigation_item_subheader.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_navigation_menu.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/design_navigation_menu_item.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/dialog_go_back.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/dialogue_music_layout.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/discrete_slider.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/enterfilename_popup.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/fastmotionvideoactivity.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/fragment_selectmusic.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/frame_container_layout.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/gallaryphotosactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/gifpreviewactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/icon_moreapp.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/item_audio.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/lay_thumb.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/layout_showcaseview.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/listgallaryactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/liststatusactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/mp3cutter_enterfilename_popup.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/mp3cutteractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_gridalbum.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_hometabactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_moviemaker.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_row_gridphoto.xml" value="0.1" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_row_listgallary.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_row_selectimagelist.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_row_selectmusic.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_selectimagefragment.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_selectimagelist.xml" value="0.264" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_tab_album.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/phototovideo_tab_photo.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/raw_image_sticker.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/row_frame_select.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/row_video.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/select_dialog_item_material.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/select_dialog_multichoice_material.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/select_dialog_singlechoice_material.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/selectmusic.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/selectmusic_row.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/selectvideocollagefragment.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/slowmotionvideoactivity.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/startactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/support_simple_spinner_dropdown_item.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/test_image_view_with_delete.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/toolbar.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videocollage_row_listaudiotrack.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videocollage_selectpopupwindow.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videocollage_selectsticker.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videocollagecropactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videocollagemakeractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videocompressactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videoconverteractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videocropactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videocutteractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videojoineractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videojoinerfragment.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videomirroractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videomyfragment.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videoplayer.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videoreverseactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videorotateactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videosplit_row_list.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videosplitteractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videotogifactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videotoimageactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videotomp3_fontlistitem.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videotomp3activity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_adapter_font.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_adaptersticker.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_adaptertextcolor.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_customtabiconc.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_customtabtextstickerlayout.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_demo_custom_tab_icons.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_fragment_empty.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_fragment_sticker.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_fragment_text1.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_fragment_text2.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_fragment_text3.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_stickerview.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_sub_sticker_img_raw.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_textstickerview.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermark_viewpagertextsticker.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/videowatermarkactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/menu/main.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/menu/menu_deleteshare.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/menu/menu_picker.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Desktop/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/menu/skip.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/bg_dark.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/bg_prev_play.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/bg_wh.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/box.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ddropdown_bg.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_next_play.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_next_unpress.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_playlist_pause.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_playlist_play.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/ic_prev_unpress.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/music_radio_btn_selector.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/navigation_empty_icon.xml" value="0.2805128205128205" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/drawable/voldown.xml" value="1.08125" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/activity_splash.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/activity_startactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/adunity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/ambilwarna_dialog.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/ambilwarna_pref_widget.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audio_select_music_row.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audiocompressoractivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/toolbar.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/activity_splash.xml" value="0.12760416666666666" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/activity_startactivity.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/ambilwarna_dialog.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/audio_select_music_row.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/audiojoineractivity.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/audiovideomixeractivity.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/crop_image_view.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_bottom_navigation_item.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_bottom_sheet_dialog.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_layout_tab_icon.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_layout_tab_text.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_menu_item_action_area.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_navigation_item_header.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_navigation_item_separator.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_navigation_item_subheader.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/design_navigation_menu_item.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/dialog_go_back.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/dialogue_music_layout.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/discrete_slider.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/enterfilename_popup.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/icon_moreapp.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/item_audio.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/lay_thumb.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/listgallaryactivity.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/phototovideo_row_gridphoto.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/row_frame_select.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/row_video.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/selectvideocollagefragment.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/startactivity.xml" value="0.15942028985507245" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/toolbar.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/videocollage_selectpopupwindow.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/videoconverteractivity.xml" value="0.20471014492753623" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/menu/main.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/menu/menu_deleteshare.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/menu/menu_picker.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/menu/skip.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/mipmap-anydpi-v26/app_logo.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/mipmap-anydpi-v26/app_logo_round.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.24166666666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
