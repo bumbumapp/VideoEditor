@@ -184,7 +184,9 @@
         <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audio_select_music_row.xml" value="0.26875" />
         <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/audiocompressoractivity.xml" value="0.26875" />
         <entry key="..\:/Users/Durkhan/Downloads/androidvideoeditor-30/codecanyon-27734397-android-video-editor-all-in-one-video-editor-app/main file/Videoeditorpro(sdk - 29)/Videoeditorpro/app/src/main/res/layout/toolbar.xml" value="0.26875" />
-        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/activity_splash.xml" value="0.12760416666666666" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/drawable/bg_round.xml" value="0.129" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/drawable/round_background.xml" value="0.129" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/activity_splash.xml" value="0.3276661514683153" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/activity_startactivity.xml" value="0.26875" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/ambilwarna_dialog.xml" value="0.26875" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/audio_select_music_row.xml" value="0.22056159420289856" />
@@ -212,10 +214,11 @@
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/row_frame_select.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/row_video.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/selectvideocollagefragment.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/startactivity.xml" value="0.15942028985507245" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/startactivity.xml" value="0.1" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/toolbar.xml" value="0.26875" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/videocollage_selectpopupwindow.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/videoconverteractivity.xml" value="0.20471014492753623" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/layout/videotoimageactivity.xml" value="0.12760416666666666" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/menu/main.xml" value="0.26875" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/menu/menu_deleteshare.xml" value="0.26875" />
         <entry key="..\:/Users/Durkhan/Play store projects/Videoeditorpro/app/src/main/res/menu/menu_picker.xml" value="0.26875" />

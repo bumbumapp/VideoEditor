@@ -90,7 +90,7 @@
                             android:layout_height="match_parent"
                             android:background="@color/darkcolor"
                             android:gravity="center"
-                            android:onClick="videocutter"
+                            android:onClick="videoCutter"
                             android:orientation="vertical"
                             android:weightSum="2">
 
@@ -130,7 +130,7 @@
                             android:layout_gravity="center"
                             android:background="@color/darkcolor"
                             android:gravity="center"
-                            android:onClick="videocompress"
+                            android:onClick="videoCompress"
                             android:orientation="vertical"
                             android:weightSum="2">
 
@@ -170,7 +170,7 @@
                             android:layout_gravity="center"
                             android:background="@color/darkcolor"
                             android:gravity="center"
-                            android:onClick="videotomp3"
+                            android:onClick="videoToMp3"
                             android:orientation="vertical"
                             android:weightSum="2">
 
@@ -215,7 +215,7 @@
                             android:layout_gravity="center"
                             android:background="@color/darkcolor"
                             android:gravity="center"
-                            android:onClick="audiovideomixer"
+                            android:onClick="audioVideoMixer"
                             android:orientation="vertical"
                             android:weightSum="2">
 
@@ -254,7 +254,7 @@
                             android:layout_gravity="center"
                             android:background="@color/darkcolor"
                             android:gravity="center"
-                            android:onClick="videomute"
+                            android:onClick="videoMute"
                             android:orientation="vertical"
                             android:weightSum="2">
 
@@ -294,7 +294,7 @@
                             android:layout_gravity="center"
                             android:background="@color/darkcolor"
                             android:gravity="center"
-                            android:onClick="videojoin"
+                            android:onClick="videoJoin"
                             android:orientation="vertical"
                             android:weightSum="2">
 
@@ -347,7 +347,7 @@
                             android:layout_gravity="center"
                             android:background="@color/darkcolor"
                             android:gravity="center"
-                            android:onClick="videotoimg"
+                            android:onClick="videoToImg"
                             android:orientation="vertical"
                             android:weightSum="2">
 
@@ -1007,16 +1007,16 @@
     android:layout_height="match_parent"
    >
 
-<!--    <com.google.android.gms.ads.AdView-->
-<!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
-<!--        android:id="@+id/adView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        ads:adSize="FULL_BANNER"-->
-<!--        ads:adUnitId="ca-app-pub-8444865753152507/4111898577">-->
-<!--    </com.google.android.gms.ads.AdView>-->
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-8444865753152507/4111898577">
+    </com.google.android.gms.ads.AdView>
 </RelativeLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
