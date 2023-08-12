@@ -1,5 +1,6 @@
 package com.bumbumapps.videoeditor;
 
+import static com.bumbumapps.AdsLoader.interstitialAd;
 import static com.bumbumapps.videoeditor.Globals.TIMER_FINISHED;
 
 import android.annotation.SuppressLint;
@@ -15,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.bumbumapps.AdsLoader;
 import com.bumbumapps.videoeditor.listmusicandmymusic.ListMusicAndMyMusicActivity;
 import com.bumbumapps.videoeditor.listvideoandmyvideo.ListVideoAndMyAlbumActivity;
 import com.bumbumapps.videoeditor.listvideowithmymusic.ListVideoAndMyMusicActivity;
@@ -34,7 +36,7 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
     private ImageView mProfileImage;
 
     private AdView adView;
-    private InterstitialAd interstitialAd;
+
 
 
     @Override public void onCreate(Bundle bundle) {
@@ -43,9 +45,7 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
         if (VERSION.SDK_INT >= 23) {
             requestPermissions(new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"}, 101);
         }
-        if (!TIMER_FINISHED){
-            Timers.timer().start();
-        }
+
 
         setContentView( R.layout.startactivity);
 
@@ -61,7 +61,7 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
         appbarLayout.addOnOffsetChangedListener(this);
         mMaxScrollSize = appbarLayout.getTotalScrollRange();
         loadbannerads();
-        setUpInterstitialAd();
+
 
     }
     @Override
@@ -99,7 +99,7 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
 
 
     private void showAds(final Class activitys, final int id){
-        if (TIMER_FINISHED){
+        if (TIMER_FINISHED && interstitialAd!=null){
             if (interstitialAd.isLoaded()){
                 interstitialAd.show();
                 interstitialAd.setAdListener(new AdListener(){
@@ -107,7 +107,7 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
                     public void onAdClosed(){
                         TIMER_FINISHED=false;
                         Timers.timer().start();
-                        setUpInterstitialAd();
+                        AdsLoader.setUpInterstitialAd(getBaseContext());
                         startedActivity(activitys,id);
 
                     }
@@ -162,11 +162,6 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
         adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
-    }
-    private void setUpInterstitialAd() {
-        interstitialAd=new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-8444865753152507/8366800364");
-        interstitialAd.loadAd(new AdRequest.Builder().build());
     }
 
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "421986543799",
+    "project_id": "video-editor-e5b0a",
+    "storage_bucket": "video-editor-e5b0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421986543799:android:f85c19890b0d2701218532",
+        "android_client_info": {
+          "package_name": "com.bumbumapps.videoeditor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421986543799-uue7o53p0m8utfrfk3h4l2q8h9hb6otk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIxt33cGmLVaCPmpExJcGcTAQj2Ua9WdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421986543799-uue7o53p0m8utfrfk3h4l2q8h9hb6otk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
