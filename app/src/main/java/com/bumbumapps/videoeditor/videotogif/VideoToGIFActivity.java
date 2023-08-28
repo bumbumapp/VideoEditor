@@ -51,6 +51,7 @@ import com.arthenica.mobileffmpeg.ExecuteCallback;
 import com.arthenica.mobileffmpeg.FFmpeg;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import static com.arthenica.mobileffmpeg.Config.RETURN_CODE_CANCEL;
@@ -193,7 +194,11 @@ public class VideoToGIFActivity extends AppCompatActivity {
             retriever.setDataSource(this.c);
             width = Integer.valueOf(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH));
             height = Integer.valueOf(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT));
-            retriever.release();
+            try {
+                retriever.release();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
             this.m.setText(new File(this.c).getName());
             d();
             this.q.setOnCompletionListener(new OnCompletionListener() {
@@ -215,9 +220,7 @@ public class VideoToGIFActivity extends AppCompatActivity {
 
 
     public void b() {
-
                 c();
-
     }
 
 

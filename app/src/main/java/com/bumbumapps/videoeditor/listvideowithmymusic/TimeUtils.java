@@ -1,5 +1,7 @@
 package com.bumbumapps.videoeditor.listvideowithmymusic;
 
+import android.util.Log;
+
 public class TimeUtils {
 
     public class MilliSeconds {

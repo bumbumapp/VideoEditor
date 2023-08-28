@@ -5250,7 +5250,11 @@ public class VideoCollageMakerActivity extends AppCompatActivity implements OnSe
                             mediaMetadataRetriever.setDataSource(videoUrl);
                             int intValue = Integer.valueOf(mediaMetadataRetriever.extractMetadata(18)).intValue();
                             int intValue2 = Integer.valueOf(mediaMetadataRetriever.extractMetadata(19)).intValue();
-                            mediaMetadataRetriever.release();
+                            try {
+                                mediaMetadataRetriever.release();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
                             Bitmap createScaledBitmap = Bitmap.createScaledBitmap(SearchVideoBitmap, intValue, intValue2, false);
                             ((ImageView) this.A.get(b)).setImageBitmap(Bitmap.createBitmap(createScaledBitmap, collageData3.getCrop_X(), collageData3.getCrop_Y(), collageData3.getCrop_width(), collageData3.getCrop_height()));
                             collageData3.setCrop_height(intValue2);
@@ -5301,6 +5305,8 @@ public class VideoCollageMakerActivity extends AppCompatActivity implements OnSe
                     ((Button) this.s.get(b)).setVisibility(0);
                 } catch (IllegalArgumentException e11) {
                     e11.printStackTrace();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
             }
         } else if (i4 == 14) {

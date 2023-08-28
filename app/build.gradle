@@ -2,15 +2,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.gms.google-services'
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.bumbumapps.videoeditor"
-        minSdkVersion 24
-        targetSdkVersion 31
-        versionCode 7
-        versionName "1.2.4"
+        minSdkVersion 26
+        targetSdkVersion 33
+        versionCode 8
+        versionName "1.2.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -52,17 +52,7 @@ android {
 
 }
 
-//ext.abiCodes = ['x86':1, 'x86_64':2, 'armeabi-v7a':3, 'arm64-v8a':4]
 
-
-//
-//android.applicationVariants.all { variant ->
-//    variant.outputs.each {
-//        output ->
-//            def baseAbiVersionCode = project.ext.abiCodes.get(output.getFilter(com.android.build.OutputFile.ABI))
-//            output.versionCodeOverride = baseAbiVersionCode + variant.versionCode
-//    }
-//}
 
 
 dependencies {
@@ -99,7 +89,7 @@ dependencies {
     implementation 'com.eyalbira.loadingdots:loading-dots:1.0.2'
 
 //    Ads
-    implementation 'com.google.android.gms:play-services-ads:19.3.0'
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
     implementation 'com.google.android.play:core:1.8.0'
     implementation platform('com.google.firebase:firebase-bom:26.1.0')
     // Declare the dependencies for the Crashlytics and Analytics libraries

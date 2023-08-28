@@ -1,14 +1,14 @@
 package com.bumbumapps.videoeditor;
 
-import static com.bumbumapps.AdsLoader.interstitialAd;
+
+import static com.bumbumapps.AdsLoader.mInterstitialAd;
 import static com.bumbumapps.videoeditor.Globals.TIMER_FINISHED;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -22,10 +22,12 @@ import com.bumbumapps.videoeditor.listvideoandmyvideo.ListVideoAndMyAlbumActivit
 import com.bumbumapps.videoeditor.listvideowithmymusic.ListVideoAndMyMusicActivity;
 import com.bumbumapps.videoeditor.phototovideo.SelectImageAndMyVideoActivity;
 import com.bumbumapps.videoeditor.videocollage.ListCollageAndMyAlbumActivity;
+import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.FullScreenContentCallback;
+
 import com.google.android.material.appbar.AppBarLayout;
 
 
@@ -43,7 +45,12 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
         super.onCreate(bundle);
 
         if (VERSION.SDK_INT >= 23) {
-            requestPermissions(new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"}, 101);
+            if (VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
+                requestPermissions(new String[]{"android.permission.READ_MEDIA_IMAGE", "android.permission.READ_MEDIA_AUDIO","android.permission.READ_MEDIA_VIDEO"}, 101);
+
+            }else {
+                requestPermissions(new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"}, 101);
+            }
         }
 
 
@@ -99,21 +106,20 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
 
 
     private void showAds(final Class activitys, final int id){
-        if (TIMER_FINISHED && interstitialAd!=null){
-            if (interstitialAd.isLoaded()){
-                interstitialAd.show();
-                interstitialAd.setAdListener(new AdListener(){
+        if (TIMER_FINISHED && mInterstitialAd!=null){
+                mInterstitialAd.show(this);
+                mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
                     @Override
-                    public void onAdClosed(){
+                    public void onAdDismissedFullScreenContent() {
                         TIMER_FINISHED=false;
                         Timers.timer().start();
                         AdsLoader.setUpInterstitialAd(getBaseContext());
                         startedActivity(activitys,id);
-
                     }
+
                 });
-            }
-            else {startedActivity(activitys,id);}
+
+
         }
         else {startedActivity(activitys,id);}
     }
