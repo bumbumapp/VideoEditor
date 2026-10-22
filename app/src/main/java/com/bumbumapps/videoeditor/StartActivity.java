@@ -1,8 +1,6 @@
 package com.bumbumapps.videoeditor;
 
 
-import static com.bumbumapps.AdsLoader.mInterstitialAd;
-import static com.bumbumapps.videoeditor.Globals.TIMER_FINISHED;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -16,7 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.bumbumapps.AdsLoader;
+import com.bumbumapps.AdsConsent;
+import com.bumbumapps.InterstitialHelper;
 import com.bumbumapps.videoeditor.listmusicandmymusic.ListMusicAndMyMusicActivity;
 import com.bumbumapps.videoeditor.listvideoandmyvideo.ListVideoAndMyAlbumActivity;
 import com.bumbumapps.videoeditor.listvideowithmymusic.ListVideoAndMyMusicActivity;
@@ -44,15 +43,7 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
     @Override public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        if (VERSION.SDK_INT >= 23) {
-            if (VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
-                requestPermissions(new String[]{"android.permission.READ_MEDIA_IMAGE", "android.permission.READ_MEDIA_AUDIO","android.permission.READ_MEDIA_VIDEO"}, 101);
-
-            }else {
-                requestPermissions(new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"}, 101);
-            }
-        }
-
+        requestPermissions(requiredMediaPermissions(VERSION.SDK_INT), 101);
 
         setContentView( R.layout.startactivity);
 
@@ -71,6 +62,21 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
 
 
     }
+    /**
+     * Media permissions for listing the user's videos, photos and music. Android 13+ used to ask for
+     * the misspelled "READ_MEDIA_IMAGE", so photo pickers stayed empty.
+     */
+    static String[] requiredMediaPermissions(int sdkInt) {
+        if (sdkInt >= Build.VERSION_CODES.TIRAMISU) {
+            return new String[]{"android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_AUDIO",
+                    "android.permission.READ_MEDIA_VIDEO"};
+        }
+        if (sdkInt >= Build.VERSION_CODES.Q) {
+            return new String[]{"android.permission.READ_EXTERNAL_STORAGE"};
+        }
+        return new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"};
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -105,23 +111,9 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
     public void videowatermark(View view) {showAds(ListVideoAndMyAlbumActivity.class,22);}
 
 
-    private void showAds(final Class activitys, final int id){
-        if (TIMER_FINISHED && mInterstitialAd!=null){
-                mInterstitialAd.show(this);
-                mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
-                    @Override
-                    public void onAdDismissedFullScreenContent() {
-                        TIMER_FINISHED=false;
-                        Timers.timer().start();
-                        AdsLoader.setUpInterstitialAd(getBaseContext());
-                        startedActivity(activitys,id);
-                    }
-
-                });
-
-
-        }
-        else {startedActivity(activitys,id);}
+    private void showAds(final Class activitys, final int id) {
+        // Choosing a tool is a natural break: capped interstitial (at most once per minute).
+        InterstitialHelper.showIfReady(this, () -> startedActivity(activitys, id));
     }
 
     @SuppressLint("WrongConstant")
@@ -165,9 +157,13 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
 
 
     private void loadbannerads() {
+        // The banner unit in this layout (.../4111898577) does not exist in the AdMob account, so
+        // no banner is requested; only consent + the interstitial are set up here.
         adView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        if (adView != null) {
+            adView.setVisibility(View.GONE);
+        }
+        AdsConsent.gather(this, () -> InterstitialHelper.preload(this));
     }
 
 }

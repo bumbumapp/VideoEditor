@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ToggleButton">
+        <attr name="tbBorderWidth" format="dimension" />
+        <attr name="tbOffBorderColor" format="color" />
+        <attr name="tbOffColor" format="color" />
+        <attr name="tbOnColor" format="color" />
+        <attr name="tbSpotColor" format="color" />
+        <attr name="tbAnimate" format="boolean" />
+        <attr name="tbAsDefaultOn" format="boolean" />
+    </declare-styleable>
+</resources>

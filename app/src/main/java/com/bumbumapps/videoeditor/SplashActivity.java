@@ -19,7 +19,7 @@ import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
-import com.google.android.play.core.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 public class SplashActivity extends AppCompatActivity {
 
