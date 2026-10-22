@@ -15,6 +15,7 @@ public class VideoApplication extends Application {
         super.onCreate();
         MultiDex.install(this);
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
+        EdgeToEdgeInsets.install(this);
     }
 
 }
