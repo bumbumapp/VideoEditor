@@ -19,7 +19,7 @@
     <string name="VideoCollage">VideoCollage</string>
     <string name="VideoCompressor">VideoCompressor</string>
     <string name="VideoConverter">VideoConverter</string>
-    <string name="VideoCroper">Video Cropper</string>
+    <string name="VideoCroper">VideoCroper</string>
     <string name="VideoCutter">VideoCutter</string>
     <string name="VideoJoiner">VideoJoiner</string>
     <string name="VideoMirror">VideoMirror</string>
