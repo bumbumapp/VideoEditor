@@ -112,7 +112,7 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
 
 
     private void showAds(final Class activitys, final int id) {
-        // Choosing a tool is a natural break: capped interstitial (at most once per minute).
+        // Choosing a tool is a natural break: capped interstitial (at most once per 8 minutes).
         InterstitialHelper.showIfReady(this, () -> startedActivity(activitys, id));
     }
 

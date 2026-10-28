@@ -16,22 +16,28 @@ import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 /**
- * Single preloaded interstitial with a frequency cap. Call {@link #preload(Context)} once ads can be
+ * Single preloaded interstitial, shown when a tool is opened: at most one per 8 minutes and none in the
+ * first 3 minutes after the app starts. Call {@link #preload(Context)} once ads can be
  * requested and {@link #showIfReady(Activity, Runnable)} at natural break points; {@code next} always runs
  * exactly once (after the ad is dismissed, or immediately if no ad is shown).
  */
 public final class InterstitialHelper {
 
-    public static final long MIN_INTERVAL_MS = 60_000L;
+    public static final long MIN_INTERVAL_MS = 8 * 60_000L;
+    public static final long FIRST_GRACE_MS = 3 * 60_000L;
 
     private static InterstitialAd interstitialAd;
     private static boolean loading;
     private static long lastShownAt = -MIN_INTERVAL_MS;
+    private static long startedAt = -1L;
 
     private InterstitialHelper() {
     }
 
     public static void preload(Context context) {
+        if (startedAt < 0) {
+            startedAt = SystemClock.elapsedRealtime();
+        }
         if (interstitialAd != null || loading || !AdsConsent.canRequestAds(context)) {
             return;
         }
@@ -53,14 +59,17 @@ public final class InterstitialHelper {
     }
 
     /** Pure frequency-cap rule, unit tested. */
-    static boolean capAllows(long now, long lastShown) {
-        return now - lastShown >= MIN_INTERVAL_MS;
+    static boolean capAllows(long now, long lastShown, long started) {
+        return now - started >= FIRST_GRACE_MS && now - lastShown >= MIN_INTERVAL_MS;
     }
 
     public static void showIfReady(Activity activity, Runnable next) {
         final Runnable after = next != null ? next : () -> { };
         long now = SystemClock.elapsedRealtime();
-        if (interstitialAd == null || activity == null || activity.isFinishing() || !capAllows(now, lastShownAt)) {
+        if (startedAt < 0) {
+            startedAt = now;
+        }
+        if (interstitialAd == null || activity == null || activity.isFinishing() || !capAllows(now, lastShownAt, startedAt)) {
             if (activity != null) {
                 preload(activity);
             }

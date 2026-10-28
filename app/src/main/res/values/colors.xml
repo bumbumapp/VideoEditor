@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#382998</color>
+    <color name="colorPrimary">#7C5CFF</color>
     <color name="colorPrimaryDark">@color/darkcolor</color>
     <color name="colorAccent">@color/darkcolor</color>
 
@@ -31,8 +31,8 @@
     <color name="timecode_shadow">@color/white</color>
     <color name="image">#ffffff</color>
     <color name="image_text">@color/white</color>
-    <color name="backgraunds">#373553</color>
-    <color name="darkcolor">#221f35</color>
+    <color name="backgraunds">#23262D</color>
+    <color name="darkcolor">#131418</color>
     <color name="light_clr">#373553</color>
 
 
