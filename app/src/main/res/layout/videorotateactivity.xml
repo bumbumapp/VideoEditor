@@ -32,7 +32,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textAppearance="?android:attr/textAppearance"
-                android:textColor="#ffffff"
+                android:textColor="@color/ve_fg"
                 android:textSize="18dp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -120,7 +120,7 @@
                 android:layout_centerVertical="true"
                 android:text="00:00"
                 android:textAppearance="?android:attr/textAppearance"
-                android:textColor="@color/white"
+                android:textColor="@color/ve_fg"
                 android:textSize="15dp" />
 
             <com.bumbumapps.videoeditor.MetaFont
@@ -132,7 +132,7 @@
                 android:layout_gravity="right"
                 android:text="00:00"
                 android:textAppearance="?android:attr/textAppearance"
-                android:textColor="@color/white"
+                android:textColor="@color/ve_fg"
                 android:textSize="15dp" />
         </RelativeLayout>
 
@@ -188,7 +188,7 @@
                                 android:clickable="false"
                                 android:gravity="center"
                                 android:text="180 Degree"
-                                android:textColor="@color/color_white_color"
+                                android:textColor="@color/ve_fg"
                                 android:textSize="17dp" />
                         </RelativeLayout>
                     </RelativeLayout>
@@ -222,7 +222,7 @@
                                 android:clickable="false"
                                 android:gravity="center"
                                 android:text="90 Degree"
-                                android:textColor="@color/color_white_color"
+                                android:textColor="@color/ve_fg"
                                 android:textSize="17dp" />
                         </RelativeLayout>
                     </RelativeLayout>
@@ -264,7 +264,7 @@
                                 android:clickable="false"
                                 android:gravity="center"
                                 android:text="270 Degree"
-                                android:textColor="@color/color_white_color"
+                                android:textColor="@color/ve_fg"
                                 android:textSize="17dp" />
                         </RelativeLayout>
                     </RelativeLayout>
@@ -298,7 +298,7 @@
                                 android:clickable="false"
                                 android:gravity="center"
                                 android:text="Custom"
-                                android:textColor="@color/color_white_color"
+                                android:textColor="@color/ve_fg"
                                 android:textSize="17dp" />
                         </RelativeLayout>
                     </RelativeLayout>

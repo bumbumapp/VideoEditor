@@ -31,7 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textAppearance="?android:attr/textAppearance"
-                android:textColor="#ffffff"
+                android:textColor="@color/ve_fg"
                 android:textSize="18dp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -100,7 +100,7 @@
                         android:gravity="center"
                         android:labelFor="@+id/starttext"
                         android:text="Start :"
-                        android:textColor="@color/white"
+                        android:textColor="@color/ve_fg"
                         android:textSize="14sp" />
 
                     <EditText
@@ -113,7 +113,7 @@
                         android:gravity="center"
                         android:inputType="numberDecimal"
                         android:singleLine="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/ve_fg"
                         android:textSize="14sp" />
 
                     <com.bumbumapps.videoeditor.MetaFont
@@ -124,7 +124,7 @@
                         android:gravity="center"
                         android:labelFor="@+id/endtext"
                         android:text="End :"
-                        android:textColor="@color/white"
+                        android:textColor="@color/ve_fg"
                         android:textSize="14sp" />
 
                     <EditText
@@ -136,7 +136,7 @@
                         android:gravity="center"
                         android:inputType="numberDecimal"
                         android:singleLine="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/ve_fg"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -167,7 +167,7 @@
                                 android:clickable="false"
                                 android:gravity="center"
                                 android:text="Select audio type :-"
-                                android:textColor="@color/white"
+                                android:textColor="@color/ve_fg"
                                 android:textSize="17dp" />
                         </RelativeLayout>
 

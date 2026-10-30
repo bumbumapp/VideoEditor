@@ -1,1022 +1,1072 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Bento home (2.0): greeting + big title, accent "Cut a video" hero, tools grouped into
+     Edit / Create / Audio sections of white tiles with pastel icon squares. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/gradents_bg"
-    android:layout_height="match_parent">
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/mainappbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    android:layout_height="match_parent"
+    android:background="@color/bento_surface"
+    android:orientation="vertical">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="@string/app_name">
-
-            <ImageView
-                android:id="@+id/mainbackdrop"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/gradents_bg"
-                android:src="@drawable/banner_main"
-                app:layout_collapseMode="parallax" />
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="?attr/actionBarSize"
-                android:background="@color/darkcolor"
-                app:layout_collapseMode="pin"
-                app:titleTextColor="@color/white"
-                app:title="@string/app_name">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:gravity="center_vertical"
-                    android:text="@string/app_name"
-                    android:textSize="20dp"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-
-            </androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
-            android:background="@drawable/gradents_bg">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/txt_greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textAppearance="@style/Bento.Text.Greeting"
+                tools:text="Good morning" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:accessibilityHeading="true"
+                android:text="@string/app_name"
+                android:textAppearance="@style/Bento.Text.Display" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/hero_cutter"
+                style="@style/Bento.Hero"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="videoCutter"
+                app:cardBackgroundColor="@color/bento_hero"
+                app:cardCornerRadius="24dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="46dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ve_filmstrip" />
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="end|top"
+                        android:background="@drawable/bento_hero_circle"
+                        android:importantForAccessibility="no"
+                        android:padding="10dp"
+                        android:src="@mipmap/videocutter"
+                        app:tint="@color/bento_onHero" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ve_hero_title"
+                            android:textAppearance="@style/Bento.Text.Hero" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/ve_hero_sub"
+                            android:textAppearance="@style/Bento.Text.HeroSub" />
+                    </LinearLayout>
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="6dp"
+                android:accessibilityHeading="true"
+                android:text="@string/ve_sec_edit"
+                android:textAppearance="@style/Bento.Text.Section" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="1dp"
-                android:orientation="vertical"
-                android:weightSum="11">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:clickable="true"
+                    android:contentDescription="Video Compress"
+                    android:focusable="true"
+                    android:onClick="videoCompress">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videoCutter"
-                            android:orientation="vertical"
-                            android:weightSum="2">
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_violet_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videocompressor"
+                            app:tint="@color/bento_tile_violet_fg" />
 
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videocutter"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Cutter"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Compress"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
                     </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videoCompress"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videocompressor"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Compress"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videoToMp3"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videotomp3"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video To MP3"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:weightSum="3">
+                    android:clickable="true"
+                    android:contentDescription="Video Converter"
+                    android:focusable="true"
+                    android:onClick="videoformatchange">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="audioVideoMixer"
-                            android:orientation="vertical"
-                            android:weightSum="2">
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_blue_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videoconverter"
+                            app:tint="@color/bento_tile_blue_fg" />
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/audiovideomixer"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Mixer"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Converter"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
                     </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videoMute"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videomute"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Mute"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videoJoin"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videojoiner"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Joiner"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <FrameLayout
-                    android:id="@+id/native_ad_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:weightSum="3">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videoToImg"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videotoimage"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video To Image"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videoformatchange"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videoconverter"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Converter"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="fastmotion"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/fastmotionvideo"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Fast Motion"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:weightSum="3">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="slowmotion"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/slowmotionvideo"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Slow Motion"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videocrop"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videocropper"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Cropper"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videotogif"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videotogif"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video To GIF"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:weightSum="3">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videorotate"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videorotate"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Rotate"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videomirror"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videomirror"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Mirror"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videosplit"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="32dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videosplitter"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Splitter"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:weightSum="3">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="videoreverse"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videoresvers"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Revserse"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="phototovideo"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/slideshowmaker"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Photo To Video"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:visibility="gone">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/white"
-                            android:gravity="center"
-                            android:onClick="videocollage"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videocollage"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Collage"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="audiocompress"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/audiocompressor"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Audio Compress"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:weightSum="2">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="audiojoiner"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/audiojoiner"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Audio Joiner"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_clr" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/darkcolor"
-                            android:gravity="center"
-                            android:onClick="audiocutter"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/mp3cutter"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Audio Cutter"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:visibility="gone">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@color/white"
-                            android:gravity="center"
-                            android:onClick="videowatermark"
-                            android:orientation="vertical"
-                            android:weightSum="2">
-
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:src="@mipmap/videowatermaker"
-                                app:tint="@color/image_text" />
-
-                            <com.bumbumapps.videoeditor.MetaFont
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:lines="2"
-                                android:text="Video Watermark"
-                                android:textColor="@color/image_text"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-        </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Cropper"
+                    android:focusable="true"
+                    android:onClick="videocrop">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_green_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videocropper"
+                            app:tint="@color/bento_tile_green_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Cropper"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Rotate"
+                    android:focusable="true"
+                    android:onClick="videorotate">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_orange_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videorotate"
+                            app:tint="@color/bento_tile_orange_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Rotate"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Mirror"
+                    android:focusable="true"
+                    android:onClick="videomirror">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_red_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videomirror"
+                            app:tint="@color/bento_tile_red_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Mirror"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Splitter"
+                    android:focusable="true"
+                    android:onClick="videosplit">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_teal_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videosplitter"
+                            app:tint="@color/bento_tile_teal_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Splitter"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Reverse"
+                    android:focusable="true"
+                    android:onClick="videoreverse">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_yellow_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videoresvers"
+                            app:tint="@color/bento_tile_yellow_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Reverse"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Mute"
+                    android:focusable="true"
+                    android:onClick="videoMute">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_gray_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videomute"
+                            app:tint="@color/bento_tile_gray_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Mute"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Fast Motion"
+                    android:focusable="true"
+                    android:onClick="fastmotion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_violet_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/fastmotionvideo"
+                            app:tint="@color/bento_tile_violet_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Fast Motion"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Slow Motion"
+                    android:focusable="true"
+                    android:onClick="slowmotion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_blue_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/slowmotionvideo"
+                            app:tint="@color/bento_tile_blue_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Slow Motion"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Joiner"
+                    android:focusable="true"
+                    android:onClick="videoJoin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_green_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videojoiner"
+                            app:tint="@color/bento_tile_green_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Joiner"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Mixer"
+                    android:focusable="true"
+                    android:onClick="audioVideoMixer">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_orange_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/audiovideomixer"
+                            app:tint="@color/bento_tile_orange_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Mixer"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="6dp"
+                android:accessibilityHeading="true"
+                android:text="@string/ve_sec_create"
+                android:textAppearance="@style/Bento.Text.Section" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Photo To Video"
+                    android:focusable="true"
+                    android:onClick="phototovideo">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_red_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/slideshowmaker"
+                            app:tint="@color/bento_tile_red_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Photo To Video"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Collage"
+                    android:focusable="true"
+                    android:onClick="videocollage">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_teal_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videocollage"
+                            app:tint="@color/bento_tile_teal_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Collage"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video To GIF"
+                    android:focusable="true"
+                    android:onClick="videotogif">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_yellow_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videotogif"
+                            app:tint="@color/bento_tile_yellow_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video To GIF"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video To Image"
+                    android:focusable="true"
+                    android:onClick="videoToImg">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_gray_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videotoimage"
+                            app:tint="@color/bento_tile_gray_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video To Image"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video Watermark"
+                    android:focusable="true"
+                    android:onClick="videowatermark">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_violet_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videowatermaker"
+                            app:tint="@color/bento_tile_violet_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video Watermark"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="6dp"
+                android:accessibilityHeading="true"
+                android:text="@string/ve_sec_audio"
+                android:textAppearance="@style/Bento.Text.Section" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Video To MP3"
+                    android:focusable="true"
+                    android:onClick="videoToMp3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_blue_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/videotomp3"
+                            app:tint="@color/bento_tile_blue_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Video To MP3"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Audio Cutter"
+                    android:focusable="true"
+                    android:onClick="audiocutter">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_green_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/mp3cutter"
+                            app:tint="@color/bento_tile_green_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Audio Cutter"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Audio Joiner"
+                    android:focusable="true"
+                    android:onClick="audiojoiner">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_orange_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/audiojoiner"
+                            app:tint="@color/bento_tile_orange_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Audio Joiner"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Bento.Tile"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:contentDescription="Audio Compress"
+                    android:focusable="true"
+                    android:onClick="audiocompress">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bento_icon_square"
+                            android:backgroundTint="@color/bento_tile_red_bg"
+                            android:importantForAccessibility="no"
+                            android:padding="8dp"
+                            android:src="@mipmap/audiocompressor"
+                            app:tint="@color/bento_tile_red_fg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Audio Compress"
+                            android:textAppearance="@style/Bento.Text.TileLabel"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-   >
 
     <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="FULL_BANNER"
-        ads:adUnitId="ca-app-pub-8444865753152507/4111898577">
-    </com.google.android.gms.ads.AdView>
-</RelativeLayout>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:visibility="gone"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8444865753152507/4111898577" />
+</LinearLayout>

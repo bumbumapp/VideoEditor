@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:textAppearance="?android:attr/textAppearance"
-                android:textColor="@color/white"
+                android:textColor="@color/ve_fg"
                 android:textSize="15dp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -121,7 +121,7 @@
                 android:layout_centerVertical="true"
                 android:text="00:00:00"
                 android:textAppearance="?android:attr/textAppearance"
-                android:textColor="@color/white"
+                android:textColor="@color/ve_fg"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
@@ -133,7 +133,7 @@
                 android:layout_centerVertical="true"
                 android:text="00:00:00"
                 android:textAppearance="?android:attr/textAppearance"
-                android:textColor="@color/white"
+                android:textColor="@color/ve_fg"
                 android:textSize="15dp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -160,7 +160,7 @@
                     android:layout_centerVertical="true"
                     android:text="Duration : 0"
                     android:textAppearance="?android:attr/textAppearance"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/ve_fg"
                     android:textSize="20dp"
                     android:textStyle="bold" />
             </RelativeLayout>

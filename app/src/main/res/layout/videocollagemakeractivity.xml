@@ -102,7 +102,7 @@
                                 android:clickable="false"
                                 android:gravity="center"
                                 android:text="Remove"
-                                android:textColor="@color/color_white_color" />
+                                android:textColor="@color/ve_fg" />
                         </RelativeLayout>
                     </RelativeLayout>
                 </LinearLayout>

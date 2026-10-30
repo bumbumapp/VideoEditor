@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stacked pages motif used on the hero tile (three white cards fanned out). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="76dp" android:height="52dp" android:viewportWidth="76" android:viewportHeight="52">
+    <group android:pivotX="56" android:pivotY="26" android:rotation="10">
+        <path android:fillColor="#8CFFFFFF" android:pathData="M42,4h22a5,5 0,0 1,5 5v34a5,5 0,0 1,-5 5h-22a5,5 0,0 1,-5 -5v-34a5,5 0,0 1,5 -5z" />
+    </group>
+    <path android:fillColor="#C0FFFFFF" android:pathData="M27,3h22a5,5 0,0 1,5 5v36a5,5 0,0 1,-5 5h-22a5,5 0,0 1,-5 -5v-36a5,5 0,0 1,5 -5z" />
+    <group android:pivotX="20" android:pivotY="26" android:rotation="-8">
+        <path android:fillColor="#FFFFFFFF" android:pathData="M11,4h22a5,5 0,0 1,5 5v34a5,5 0,0 1,-5 5h-22a5,5 0,0 1,-5 -5v-34a5,5 0,0 1,5 -5z" />
+    </group>
+</vector>

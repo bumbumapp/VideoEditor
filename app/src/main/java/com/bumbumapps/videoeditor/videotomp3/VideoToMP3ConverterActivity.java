@@ -230,18 +230,18 @@ public class VideoToMP3ConverterActivity extends AppCompatActivity {
                 @Override public void onClick(View view) {
                     VideoToMP3ConverterActivity.this.d = "AAC";
                     VideoToMP3ConverterActivity.this.iv_aac.setBackgroundResource(R.drawable.bg_round_press);
-                    VideoToMP3ConverterActivity.this.iv_aac.setTextColor(Color.parseColor("#ffffff"));
+                    VideoToMP3ConverterActivity.this.iv_aac.setTextColor(0xFFFFFFFF);
                     VideoToMP3ConverterActivity.this.iv_mp3.setBackgroundResource(R.drawable.bg_round);
-                    VideoToMP3ConverterActivity.this.iv_mp3.setTextColor(Color.parseColor("#0f9d58"));
+                    VideoToMP3ConverterActivity.this.iv_mp3.setTextColor(0xFF6B4EF0);
                 }
             });
             this.iv_mp3.setOnClickListener(new OnClickListener() {
                 @Override public void onClick(View view) {
                     VideoToMP3ConverterActivity.this.d = "MP3";
                     VideoToMP3ConverterActivity.this.iv_aac.setBackgroundResource(R.drawable.bg_round);
-                    VideoToMP3ConverterActivity.this.iv_aac.setTextColor(Color.parseColor("#0f9d58"));
+                    VideoToMP3ConverterActivity.this.iv_aac.setTextColor(0xFF6B4EF0);
                     VideoToMP3ConverterActivity.this.iv_mp3.setBackgroundResource(R.drawable.bg_round_press);
-                    VideoToMP3ConverterActivity.this.iv_mp3.setTextColor(Color.parseColor("#ffffff"));
+                    VideoToMP3ConverterActivity.this.iv_mp3.setTextColor(0xFFFFFFFF);
                 }
             });
             this.m.setOnItemClickListener(new OnItemClickListener() {

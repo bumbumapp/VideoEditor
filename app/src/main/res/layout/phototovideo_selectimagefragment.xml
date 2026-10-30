@@ -9,7 +9,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@color/darkcolor">
+            android:background="@color/ve_bg">
 
             <com.bumbumapps.videoeditor.MetaFont
                 android:id="@+id/A1"
@@ -18,7 +18,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:text="Create Amazing Story"
-                android:textColor="@color/color_white_color"
+                android:textColor="@color/ve_fg"
                 android:textSize="25dp" />
 
             <com.bumbumapps.videoeditor.MetaFont
@@ -29,7 +29,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:text="With"
-                android:textColor="@color/color_white_color"
+                android:textColor="@color/ve_fg"
                 android:textSize="22dp" />
 
             <com.bumbumapps.videoeditor.MetaFont
@@ -40,12 +40,12 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Photo To Video"
-                android:textColor="@color/color_white_color"
+                android:textColor="@color/ve_fg"
                 android:textSize="25dp" />
         </RelativeLayout>
         <RelativeLayout android:id="@+id/A12" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_below="@+id/A11">
             <com.bumbumapps.videoeditor.MetaFont
-                android:textSize="30dp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/Text" android:background="@drawable/circle_shape_1" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="Go" android:layout_centerHorizontal="true"/>
+                android:textSize="30dp" android:textColor="@color/ve_fg" android:gravity="center" android:id="@+id/Text" android:background="@drawable/circle_shape_1" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="Go" android:layout_centerHorizontal="true"/>
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

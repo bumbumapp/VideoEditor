@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/darkcolor">
+        android:background="@color/ve_bg">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="ORIGINAL"
-                android:textColor="#B3FFFFFF"
+                android:textColor="@color/ve_fg"
                 android:textSize="17dp" />
         </LinearLayout>
 
@@ -106,7 +106,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="FIT"
-                android:textColor="#ffffffff"
+                android:textColor="@color/ve_fg"
                 android:textSize="17dp" />
         </LinearLayout>
     </RelativeLayout>

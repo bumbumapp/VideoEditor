@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ve_hero_title">Cut a video</string>
+    <string name="ve_hero_sub">Trim, then save or share in seconds</string>
+    <string name="ve_sec_edit">Edit video</string>
+    <string name="ve_sec_create">Create</string>
+    <string name="ve_sec_audio">Audio</string>
+    <string name="greet_morning">Good morning</string>
+    <string name="greet_afternoon">Good afternoon</string>
+    <string name="greet_evening">Good evening</string>
+</resources>

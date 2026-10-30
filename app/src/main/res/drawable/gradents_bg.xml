@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Bento: tool screens sit on the plain surface (was a purple gradient). -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-<gradient android:startColor="#2E2851"  android:centerColor="#2E2853" android:endColor="@color/darkcolor"/>
+    <solid android:color="@color/ve_bg" />
 </shape>

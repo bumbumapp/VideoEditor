@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/darkcolor"
+        android:background="@color/ve_bg"
         android:gravity="center">
 
         <RelativeLayout
@@ -27,7 +27,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_back"
-                app:tint="@color/white"
+                app:tint="@color/ve_fg"
                 tools:ignore="UnknownId" />
 
             <com.bumbumapps.videoeditor.MetaFont
@@ -37,7 +37,7 @@
                 android:layout_centerVertical="true"
                 android:singleLine="true"
                 android:text="Select Music"
-                android:textColor="@color/white"
+                android:textColor="@color/ve_fg"
                 android:textSize="20sp" />
         </RelativeLayout>
     </LinearLayout>

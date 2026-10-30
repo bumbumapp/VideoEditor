@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hero motif: four video frames fading out, translucent white with a play mark on the first. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="150dp" android:height="46dp" android:viewportWidth="150" android:viewportHeight="46">
+    <path android:fillColor="#FFFFFFFF" android:pathData="M6,6h26a4,4 0,0 1,4,4v26a4,4 0,0 1,-4,4h-26a4,4 0,0 1,-4,-4v-26a4,4 0,0 1,4,-4z"/>
+    <path android:fillColor="#FFFFFFFF" android:fillAlpha="0.0" android:pathData="M0,0"/>
+    <path android:fillColor="#D9FFFFFF" android:pathData="M43,6h26a4,4 0,0 1,4,4v26a4,4 0,0 1,-4,4h-26a4,4 0,0 1,-4,-4v-26a4,4 0,0 1,4,-4z"/>
+    <path android:fillColor="#D9FFFFFF" android:fillAlpha="0.0" android:pathData="M0,0"/>
+    <path android:fillColor="#B3FFFFFF" android:pathData="M80,6h26a4,4 0,0 1,4,4v26a4,4 0,0 1,-4,4h-26a4,4 0,0 1,-4,-4v-26a4,4 0,0 1,4,-4z"/>
+    <path android:fillColor="#B3FFFFFF" android:fillAlpha="0.0" android:pathData="M0,0"/>
+    <path android:fillColor="#80FFFFFF" android:pathData="M117,6h26a4,4 0,0 1,4,4v26a4,4 0,0 1,-4,4h-26a4,4 0,0 1,-4,-4v-26a4,4 0,0 1,4,-4z"/>
+    <path android:fillColor="#80FFFFFF" android:fillAlpha="0.0" android:pathData="M0,0"/>
+    <path android:fillColor="@color/bento_hero" android:pathData="M15,15.5v15l12,-7.5z"/>
+</vector>

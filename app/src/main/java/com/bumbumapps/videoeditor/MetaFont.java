@@ -28,7 +28,8 @@ public class MetaFont extends AppCompatTextView {
     private void a(AttributeSet attributeSet) {
         if (attributeSet != null) {
             TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, a);
-            setTypeface(Typeface.createFromAsset(getContext().getAssets(), "AVENIRLTSTD-MEDIUM.OTF"));
+            // Bento: Plus Jakarta Sans everywhere (was the bundled Avenir asset).
+            setTypeface(androidx.core.content.res.ResourcesCompat.getFont(getContext(), com.bumbumapps.videoeditor.R.font.jakarta_semibold));
             obtainStyledAttributes.recycle();
         }
     }

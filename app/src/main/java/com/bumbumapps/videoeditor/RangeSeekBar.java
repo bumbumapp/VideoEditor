@@ -24,7 +24,7 @@ public class RangeSeekBar<T extends Number> extends AppCompatImageView {
     public static final int ACTION_POINTER_INDEX_MASK = 65280;
     public static final int ACTION_POINTER_INDEX_SHIFT = 8;
     public static final int ACTION_POINTER_UP = 6;
-    public static final int BACKGROUND_COLOR = Color.parseColor("#17ce75");
+    public static final int BACKGROUND_COLOR = 0xFF6B4EF0;
     public static final int DEFAULT_COLOR = Color.parseColor("#4fa2f2");
     public static final int INVALID_POINTER_ID = 255;
     public final boolean IS_MULTI_COLORED;
@@ -142,11 +142,11 @@ public class RangeSeekBar<T extends Number> extends AppCompatImageView {
         this.i = t3.doubleValue();
         this.u = a.a(t2);
         this.IS_MULTI_COLORED = false;
-        this.SINGLE_COLOR = Color.parseColor("#0f9d58");
+        this.SINGLE_COLOR = 0xFF6B4EF0;
         this.LEFT_COLOR = 0;
         this.MIDDLE_COLOR = 0;
         this.RIGHT_COLOR = 0;
-        this.SINGLE_COLOR = Color.parseColor("#0f9d58");
+        this.SINGLE_COLOR = 0xFF6B4EF0;
         this.c = BitmapFactory.decodeResource(getResources(), R.drawable.seekleft);
         this.e = BitmapFactory.decodeResource(getResources(), R.drawable.seekleft);
         this.d = BitmapFactory.decodeResource(getResources(), R.drawable.seekright);

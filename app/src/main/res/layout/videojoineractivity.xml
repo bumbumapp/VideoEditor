@@ -25,9 +25,9 @@
             </RelativeLayout>
             <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.3">
                 <com.bumbumapps.videoeditor.MetaFont
-                    android:textAppearance="?android:attr/textAppearance" android:textSize="15dp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/left_pointer1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                    android:textAppearance="?android:attr/textAppearance" android:textSize="15dp" android:textStyle="bold" android:textColor="@color/ve_fg" android:id="@+id/left_pointer1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
                 <com.bumbumapps.videoeditor.MetaFont
-                    android:textAppearance="?android:attr/textAppearance" android:textSize="15dp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/right_pointer1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                    android:textAppearance="?android:attr/textAppearance" android:textSize="15dp" android:textStyle="bold" android:textColor="@color/ve_fg" android:id="@+id/right_pointer1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="3" android:layout_weight="1">
@@ -55,7 +55,7 @@
                     android:layout_centerVertical="true"
                     android:text="00:00:00"
                     android:textAppearance="?android:attr/textAppearance"
-                    android:textColor="@color/white"
+                    android:textColor="@color/ve_fg"
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
@@ -67,7 +67,7 @@
                     android:layout_centerVertical="true"
                     android:text="00:00:00"
                     android:textAppearance="?android:attr/textAppearance"
-                    android:textColor="@color/white"
+                    android:textColor="@color/ve_fg"
                     android:textSize="15dp"
                     android:textStyle="bold" />
             </RelativeLayout>

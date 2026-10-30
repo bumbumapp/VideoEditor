@@ -47,21 +47,19 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
 
         setContentView( R.layout.startactivity);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        AppBarLayout appbarLayout = (AppBarLayout) findViewById(R.id.mainappbar);
-        mProfileImage = (ImageView) findViewById(R.id.mainbackdrop);
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-        appbarLayout.addOnOffsetChangedListener(this);
-        mMaxScrollSize = appbarLayout.getTotalScrollRange();
+        ((android.widget.TextView) findViewById(R.id.txt_greeting)).setText(
+                greetingRes(java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY)));
         loadbannerads();
 
 
     }
+    /** Time-of-day greeting for the Bento header. */
+    static int greetingRes(int hour) {
+        if (hour >= 5 && hour < 12) return R.string.greet_morning;
+        if (hour >= 12 && hour < 18) return R.string.greet_afternoon;
+        return R.string.greet_evening;
+    }
+
     /**
      * Media permissions for listing the user's videos, photos and music. Android 13+ used to ask for
      * the misspelled "READ_MEDIA_IMAGE", so photo pickers stayed empty.
@@ -126,33 +124,9 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
     }
 
 
-    private static final int PERCENTAGE_TO_ANIMATE_AVATAR = 20;
-    private boolean mIsAvatarShown = true;
-    private int mMaxScrollSize = 1;
     @Override
     public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-            mMaxScrollSize = appBarLayout.getTotalScrollRange();
-
-        int percentage = 0;
-        try {
-            percentage = (Math.abs(verticalOffset)) * 100 / mMaxScrollSize;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if (percentage >= PERCENTAGE_TO_ANIMATE_AVATAR && mIsAvatarShown) {
-            mIsAvatarShown = false;
-
-            toolbar.setTitle("");
-
-        }
-
-        if (percentage <= PERCENTAGE_TO_ANIMATE_AVATAR && !mIsAvatarShown) {
-            mIsAvatarShown = true;
-            toolbar.setTitle("Video Editor");
-
-
-        }
+        // Bento home has no collapsing app bar any more.
     }
 
 

@@ -3,7 +3,7 @@
     <RelativeLayout android:background="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="50dp">
         <ImageView android:id="@+id/btn_back" android:background="@drawable/back_unpresed" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="16dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
         <com.bumbumapps.videoeditor.MetaFont
-            android:textSize="20dp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="Moments" android:layout_toRightOf="@+id/btn_back" android:layout_centerVertical="true"/>
+            android:textSize="20dp" android:textColor="@color/ve_fg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="Moments" android:layout_toRightOf="@+id/btn_back" android:layout_centerVertical="true"/>
 
         <ImageView
             android:id="@+id/btnNext"

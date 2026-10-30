@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <gradient android:startColor="@color/white" android:endColor="@color/white" android:angle="270" android:centerColor="@color/white"/>
-    <corners android:radius="2dp"/>
+<!-- Bento selected option: accent container with an accent outline. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/bento_primaryContainer" />
+    <stroke android:width="2dp" android:color="@color/bento_primary" />
+    <corners android:radius="14dp" />
 </shape>

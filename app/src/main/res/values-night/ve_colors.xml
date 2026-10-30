@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ve_fg">#EDEFF5</color>
+    <color name="ve_fg2">#9AA1B2</color>
+    <color name="ve_bg">#0D0F16</color>
+    <color name="ve_card">#1B1E29</color>
+    <color name="ve_card2">#20242F</color>
+    <bool name="ve_light_bars">false</bool>
+</resources>
