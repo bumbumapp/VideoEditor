@@ -172,7 +172,7 @@
                         android:layout_marginLeft="5dp"
                         android:clickable="false"
                         android:gravity="center"
-                        android:text="Select file formate :"
+                        android:text="Select file format:"
                         android:textColor="@color/ve_fg"
                         android:textSize="18dp" />
                 </RelativeLayout>
