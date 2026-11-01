@@ -11,7 +11,7 @@ def adsPropsFile = rootProject.file('ads.properties')
 if (adsPropsFile.exists()) adsPropsFile.withInputStream { adsProps.load(it) }
 def adId = { String key, String fallback -> ((project.findProperty(key) ?: adsProps.getProperty(key))?.toString()?.trim()) ?: fallback }
 def HMS_TEST_INTERSTITIAL_ID = 'testb4znbuh3n2'
-def HMS_INTERSTITIAL_ID = adId('HMS_INTERSTITIAL_ID', HMS_TEST_INTERSTITIAL_ID)
+def HMS_INTERSTITIAL_ID = adId('HMS_INTERSTITIAL_ID', 'm9jt1vsc2o')
 
 android {
     namespace 'com.bumbumapps.videoeditor'
