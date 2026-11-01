@@ -19,7 +19,6 @@ import androidx.fragment.app.Fragment;
 import com.bumbumapps.videoeditor.R;
 import com.bumbumapps.videoeditor.videowatermark.VideoWatermarkActivity;
 import com.bumptech.glide.Glide;
-import com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 
 import java.util.ArrayList;
@@ -235,7 +234,7 @@ public class FragmentSticker extends Fragment {
             this.a = 319;
         }
         if (i == 7) {
-            this.d = ModuleDescriptor.MODULE_VERSION;
+            this.d = 320;
             this.a = 339;
         }
         if (i == 8) {

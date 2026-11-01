@@ -1062,11 +1062,10 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.gms.ads.AdView
+    <!-- Banner slot (unused, kept hidden). A plain view so the hms build has no AdMob class here. -->
+    <FrameLayout
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-8444865753152507/4111898577" />
+        android:visibility="gone" />
 </LinearLayout>

@@ -4,6 +4,15 @@ if (file('google-services.json').exists()) {
     apply plugin: 'com.google.gms.google-services'
 }
 
+// Huawei Ads (Petal) slot ID for the AppGallery build: -PHMS_INTERSTITIAL_ID=... or a gitignored ads.properties.
+// Until the real slot is set the hms build falls back to Huawei's public test slot. (No banner is shown.)
+def adsProps = new Properties()
+def adsPropsFile = rootProject.file('ads.properties')
+if (adsPropsFile.exists()) adsPropsFile.withInputStream { adsProps.load(it) }
+def adId = { String key, String fallback -> ((project.findProperty(key) ?: adsProps.getProperty(key))?.toString()?.trim()) ?: fallback }
+def HMS_TEST_INTERSTITIAL_ID = 'testb4znbuh3n2'
+def HMS_INTERSTITIAL_ID = adId('HMS_INTERSTITIAL_ID', HMS_TEST_INTERSTITIAL_ID)
+
 android {
     namespace 'com.bumbumapps.videoeditor'
     compileSdk 36
@@ -17,6 +26,19 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters "arm64-v8a", "armeabi-v7a"
+        }
+    }
+
+    // play = Google Play (AdMob + UMP), hms = Huawei AppGallery (Huawei Ads, no Google Mobile Services).
+    flavorDimensions = ['store']
+    productFlavors {
+        play {
+            dimension 'store'
+        }
+        hms {
+            dimension 'store'
+            resValue 'string', 'hms_interstitial_id', HMS_INTERSTITIAL_ID
+            resValue 'string', 'hms_test_interstitial_id', HMS_TEST_INTERSTITIAL_ID
         }
     }
 
@@ -83,8 +105,10 @@ dependencies {
     implementation 'com.edmodo:cropper:1.0.0'
     implementation 'com.github.iammert:ScalingLayout:1.2.1'
 
-    implementation 'com.google.android.gms:play-services-ads:25.5.0'
-    implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+    playImplementation 'com.google.android.gms:play-services-ads:25.5.0'
+    playImplementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+    hmsImplementation 'com.huawei.hms:ads-lite:13.4.91.301'
+    // Both flavors; every call is wrapped (SplashActivity) so it fails silently without Google Play.
     // Play Core 1.x is incompatible with targetSdk 34+; in-app updates moved to app-update.
     implementation 'com.google.android.play:app-update:2.1.0'
     implementation platform('com.google.firebase:firebase-bom:35.1.0')

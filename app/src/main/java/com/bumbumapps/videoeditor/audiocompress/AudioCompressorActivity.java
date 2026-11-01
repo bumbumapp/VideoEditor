@@ -60,7 +60,6 @@ import com.arthenica.mobileffmpeg.Config;
 import com.arthenica.mobileffmpeg.ExecuteCallback;
 import com.arthenica.mobileffmpeg.FFmpeg;
 
-import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 
 import java.io.File;
@@ -156,7 +155,6 @@ public class AudioCompressorActivity extends AppCompatActivity implements Marker
     public EditText ar;
 
     public EditText as;
-    private InterstitialAd at;
     private TextWatcher au = new TextWatcher() {
         public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
             //add

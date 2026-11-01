@@ -1,6 +1,5 @@
 package com.bumbumapps.videoeditor.audiocutter.cutter;
 
-import com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class CheapMP3 extends CheapSoundFile {
-    private static int[] p = {0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, ModuleDescriptor.MODULE_VERSION, 0};
+    private static int[] p = {0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 0};
     private static int[] q = {0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160, 0};
     private static int[] r = {44100, 48000, 32000, 0};
     private static int[] s = {22050, 24000, 16000, 0};

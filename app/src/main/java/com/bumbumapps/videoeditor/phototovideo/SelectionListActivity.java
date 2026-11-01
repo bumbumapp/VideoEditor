@@ -40,7 +40,6 @@ import com.bumbumapps.videoeditor.phototovideo.dbhelper.AssetsDataBaseHelper;
 import com.bumbumapps.videoeditor.phototovideo.tablayout.HomeTab;
 import com.bumbumapps.videoeditor.phototovideo.util.Utils;
 
-import com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -317,7 +316,7 @@ public class SelectionListActivity extends AppCompatActivity {
     }
 
     private void c() {
-        ImageLoaderConfiguration build = new ImageLoaderConfiguration.Builder(getApplicationContext()).diskCacheExtraOptions(ModuleDescriptor.MODULE_VERSION, 480, null).defaultDisplayImageOptions(new DisplayImageOptions.Builder().cacheInMemory(false).cacheOnDisk(k).considerExifParams(k).bitmapConfig(Config.RGB_565).imageScaleType(ImageScaleType.EXACTLY_STRETCHED).build()).build();
+        ImageLoaderConfiguration build = new ImageLoaderConfiguration.Builder(getApplicationContext()).diskCacheExtraOptions(320, 480, null).defaultDisplayImageOptions(new DisplayImageOptions.Builder().cacheInMemory(false).cacheOnDisk(k).considerExifParams(k).bitmapConfig(Config.RGB_565).imageScaleType(ImageScaleType.EXACTLY_STRETCHED).build()).build();
         this.e = ImageLoader.getInstance();
         this.e.init(build);
     }

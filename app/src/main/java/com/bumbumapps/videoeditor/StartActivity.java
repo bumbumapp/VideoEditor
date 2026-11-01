@@ -21,11 +21,6 @@ import com.bumbumapps.videoeditor.listvideoandmyvideo.ListVideoAndMyAlbumActivit
 import com.bumbumapps.videoeditor.listvideowithmymusic.ListVideoAndMyMusicActivity;
 import com.bumbumapps.videoeditor.phototovideo.SelectImageAndMyVideoActivity;
 import com.bumbumapps.videoeditor.videocollage.ListCollageAndMyAlbumActivity;
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.FullScreenContentCallback;
 
 import com.google.android.material.appbar.AppBarLayout;
 
@@ -36,7 +31,7 @@ public class StartActivity extends AppCompatActivity implements AppBarLayout.OnO
     private Toolbar toolbar;
     private ImageView mProfileImage;
 
-    private AdView adView;
+    private View adView;
 
 
 

@@ -77,6 +77,16 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        // Play In-App Update: fails silently on devices without Google Play (e.g. the Huawei/AppGallery build).
+        try {
+            checkForAppUpdate();
+        } catch (RuntimeException e) {
+            Log.w("TAdsvgsdG", "In-app update unavailable", e);
+            mAppUpdateManager = null;
+        }
+    }
+
+    private void checkForAppUpdate() {
         mAppUpdateManager = AppUpdateManagerFactory.create(this);
         Log.e("TAdsvgsdG", "checkForAppUpdateAvailability: onResume");
 
@@ -105,14 +115,18 @@ public class SplashActivity extends AppCompatActivity {
 
                 }
             }
-        });
+        }).addOnFailureListener(e -> Log.w("TAdsvgsdG", "checkForAppUpdateAvailability failed", e));
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         if (mAppUpdateManager != null) {
-            mAppUpdateManager.unregisterListener(installStateUpdatedListener);
+            try {
+                mAppUpdateManager.unregisterListener(installStateUpdatedListener);
+            } catch (RuntimeException e) {
+                Log.w("TAdsvgsdG", "unregisterListener failed", e);
+            }
         }
     }
 
